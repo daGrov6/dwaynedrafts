@@ -32,7 +32,7 @@ class MyClient(discord.Client):
         print('Found draft channels:', self._drafts)
 
         for potential_dwayne in self.get_all_members():
-            if self.user.id == potential_dwayne.id or potential_dwayne.name == 'Carson':
+            if self.user.id != potential_dwayne.id:
                 self._dwaynes.append(potential_dwayne)
 
         print('Found Dwyanes:', self._dwaynes)
